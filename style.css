@@ -783,7 +783,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
    above is driven by one element — no JavaScript involved.
    Form fields (#name, #email, #message) are styled through .field__input.
    Section anchors get their scroll offset from section[id] in section 3.  */
-#nav-panel,
 #main-content { display: block; }
 
 #top { scroll-margin-top: 0; }
@@ -2326,3 +2325,129 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.75em; color: #555; }
 }
+
+/* ==========================================================================
+   18. PRICING + FLOATING WHATSAPP  (added)
+   ========================================================================== */
+#lang-ar:checked ~ main .eyebrow,
+#lang-ar:checked ~ main .timeline__num,
+#lang-ar:checked ~ .site-footer .footer__heading { letter-spacing: normal; }
+
+.pricing__grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.price-card:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+
+.price-card--featured {
+  background: linear-gradient(180deg, var(--card-2), var(--card));
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: var(--shadow-accent);
+}
+
+.price-card__badge {
+  position: absolute;
+  top: -0.8rem;
+  inset-inline-start: 1.25rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background: var(--btn-gradient);
+  color: var(--on-brand);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.price-card__name { margin: 0; font-size: 1.25rem; font-weight: 700; color: var(--text); }
+.price-card__desc { margin: 0; color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem; }
+
+.price-card__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin: 0.25rem 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.price-card__amount { color: var(--text); font-size: 2rem; font-weight: 800; line-height: 1; }
+.price-card__cur { color: var(--text); font-weight: 600; }
+
+.price-card__list {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+  flex: 1 1 auto;
+}
+.price-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.price-card__list .icon { flex: none; width: 1.1rem; height: 1.1rem; margin-top: 0.25rem; color: var(--primary); }
+
+/* Floating WhatsApp button */
+.wa-float {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1.1rem;
+  border-radius: var(--radius-pill);
+  background: #25D366;
+  color: #04200F;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 12px 30px -10px rgba(37, 211, 102, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wa-float:hover { transform: translateY(-2px); }
+.wa-float:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+.wa-float .icon { width: 1.5rem; height: 1.5rem; flex: none; }
+
+@media (max-width: 480px) {
+  .wa-float { padding: 0.85rem; }
+  .wa-float__text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+@media print { .wa-float { display: none; } }
+
+/* ---- Desktop nav: keep everything on ONE row (7 links + language switch) ---- */
+@media (min-width: 1024px) {
+  .nav__panel { display: flex; flex-wrap: nowrap; gap: 1rem; }
+  .nav__list { gap: 0.1rem; flex-wrap: nowrap; }
+  .nav__link { padding: 0.5rem 0.6rem; font-size: 0.9rem; white-space: nowrap; }
+  .nav__link::after { left: 0.6rem; right: 0.6rem; }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .nav__github { display: none; }
+}
+
+/* Keep the floating WhatsApp button from covering the footer text */
+.site-footer { padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px)); }
