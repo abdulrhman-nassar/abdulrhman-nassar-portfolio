@@ -1,1 +1,896 @@
+<!DOCTYPE html>
+<html lang="ar" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta name="theme-color" content="#0E1513">
 
+  <title>NASSAR DEV | مطوّر مواقع ومتاجر إلكترونية</title>
+  <meta name="description" content="NASSAR DEV — مطوّر ويب يبني مواقع ومتاجر إلكترونية وصفحات هبوط سريعة ومتجاوبة مع الموبايل لأصحاب المحلات والشركات. NASSAR DEV builds fast, responsive websites and online stores. Available for freelance projects.">
+  <meta name="author" content="NASSAR DEV">
+  <meta name="keywords" content="NASSAR DEV, Python Developer, Front-End Developer, Web Developer Portfolio, HTML5, CSS3, JavaScript, Responsive Web Design, Freelance Developer">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdulrhman-nassar.github.io/abdulrhman-nassar-portfolio/">
+  <meta property="og:image" content="https://abdulrhman-nassar.github.io/abdulrhman-nassar-portfolio/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://abdulrhman-nassar.github.io/abdulrhman-nassar-portfolio/og-image.jpg">
+  <meta property="og:site_name" content="NASSAR DEV">
+  <meta property="og:title" content="NASSAR DEV | مطوّر مواقع ومتاجر إلكترونية">
+  <meta property="og:description" content="أبني لك موقعًا أو متجرًا إلكترونيًا سريعًا ومتجاوبًا مع الموبايل، لأصحاب المحلات والشركات. كلّمني على واتساب.">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NASSAR DEV | مطوّر مواقع ومتاجر إلكترونية">
+  <meta name="twitter:description" content="أبني لك موقعًا أو متجرًا إلكترونيًا سريعًا ومتجاوبًا مع الموبايل، لأصحاب المحلات والشركات. كلّمني على واتساب.">
+
+  <!-- Favicon: inline SVG monogram (no extra request, no JS) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23141D1A'/%3E%3Cpath d='M18 46V18h6l16 19V18h6v28h-6L24 27v19z' fill='%23E5B454'/%3E%3C/svg%3E">
+
+  <!-- Typography: IBM Plex Sans Arabic (text, Arabic + Latin) + IBM Plex Mono (code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <!-- Language state for the CSS-only EN | AR switch.
+       The two radios are the only "state" holders — sibling selectors in
+       style.css show one language and hide the other. No JavaScript. -->
+  <input class="lang-state" type="radio" name="lang" id="lang-en" autocomplete="off">
+  <input class="lang-state" type="radio" name="lang" id="lang-ar" autocomplete="off" checked>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================================================
+       ICON SPRITE — inline SVG symbols (no icon library, no JS)
+       ============================================================ -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.24-3.24-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.24a11.5 11.5 0 0 1 6.01 0c2.29-1.56 3.3-1.24 3.3-1.24.65 1.65.24 2.88.12 3.18.77.84 1.23 1.92 1.23 3.24 0 4.63-2.81 5.65-5.49 5.95.43.37.82 1.1.82 2.22 0 1.6-.02 2.89-.02 3.28 0 .32.22.7.83.58C20.57 22.29 24 17.79 24 12.5 24 5.87 18.63.5 12 .5z"/>
+    </symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.25-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.22-3.74.99 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89a9.82 9.82 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L0 24l6.31-1.65a11.9 11.9 0 0 0 5.68 1.45c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.42-8.42"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5Zm2 .6v.35l8 5.32 8-5.32V5.6H4Zm16 13.4V8.08l-7.5 5a1 1 0 0 1-1 0L4 8.08V19h16Z"/>
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/>
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6m0-6L10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-6 6 6-6 6 6"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2 14.2 8.4 20.6 10.6 14.2 12.8 12 19.2 9.8 12.8 3.4 10.6 9.8 8.4 12 2Zm7 12 .95 2.9L23 17.9l-3.05 1L19 21.8l-.95-2.9-3.05-1 3.05-1L19 14Z"/>
+    </symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 5.5A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-13Zm3.5 4L10 12l-3.5 2.5M12.5 15H17"/>
+    </symbol>
+    <symbol id="i-code" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m8 8-4 4 4 4m8-8 4 4-4 4m-2.5-11-3 14"/>
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5 9-5Zm9 9-9 5-9-5m18 4-9 5-9-5"/>
+    </symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 4h2.2l2.3 11.2a1.5 1.5 0 0 0 1.5 1.2h8.3a1.5 1.5 0 0 0 1.5-1.2L20.5 8H6m3.5 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm9 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7.5 8a7.5 7.5 0 0 1 15 0"/>
+    </symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M9.6 5.2C6.5 6.9 4.6 9.8 4.6 13.3c0 3.3 1.9 5.5 4.6 5.5 2.2 0 3.9-1.6 3.9-3.8 0-2.1-1.5-3.6-3.5-3.6-.4 0-.9.1-1 .2 0-1.9 1.5-3.8 3.7-5L9.6 5.2Zm9.1 0c-3.1 1.7-5 4.6-5 8.1 0 3.3 1.9 5.5 4.6 5.5 2.2 0 3.9-1.6 3.9-3.8 0-2.1-1.5-3.6-3.5-3.6-.4 0-.9.1-1 .2 0-1.9 1.5-3.8 3.7-5l-2.7-1.4Z"/>
+    </symbol>
+  </svg>
+
+  <!-- ============================================================
+       HEADER / NAVBAR  (CSS-only mobile navigation via checkbox)
+       ============================================================ -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="NASSAR DEV — home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" focusable="false"><path d="M18 46V18h6l16 19V18h6v28h-6L24 27v19z" fill="currentColor"/></svg>
+        </span>
+        <span class="brand__text" translate="no">NASSAR<span class="brand__accent"> DEV</span></span>
+      </a>
+
+      <!-- CSS-only nav toggle: the checkbox itself is the control (no JS required) -->
+      <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-label="Toggle navigation menu">
+      <label class="nav__burger" for="nav-toggle" aria-hidden="true">
+        <span class="nav__burger-icon" aria-hidden="true">
+          <svg class="icon icon--menu" viewBox="0 0 24 24" focusable="false"><use href="#i-menu"></use></svg>
+          <svg class="icon icon--close" viewBox="0 0 24 24" focusable="false"><use href="#i-close"></use></svg>
+        </span>
+      </label>
+
+      <div class="nav__panel" id="nav-panel">
+        <ul class="nav__list">
+          <li><a class="nav__link is-active" href="#home"><span class="lang-en" lang="en" dir="ltr">Home</span><span class="lang-ar" lang="ar" dir="rtl">الرئيسية</span></a></li>
+          <li><a class="nav__link" href="#about"><span class="lang-en" lang="en" dir="ltr">About</span><span class="lang-ar" lang="ar" dir="rtl">نبذة</span></a></li>
+          <li><a class="nav__link" href="#skills"><span class="lang-en" lang="en" dir="ltr">Skills</span><span class="lang-ar" lang="ar" dir="rtl">المهارات</span></a></li>
+          <li><a class="nav__link" href="#services"><span class="lang-en" lang="en" dir="ltr">Services</span><span class="lang-ar" lang="ar" dir="rtl">الخدمات</span></a></li>
+          <li><a class="nav__link" href="#projects"><span class="lang-en" lang="en" dir="ltr">Projects</span><span class="lang-ar" lang="ar" dir="rtl">المشاريع</span></a></li>
+          <li><a class="nav__link" href="#contact"><span class="lang-en" lang="en" dir="ltr">Contact</span><span class="lang-ar" lang="ar" dir="rtl">تواصل</span></a></li>
+        </ul>
+
+        <!-- CSS-only language switcher: radio inputs + labels (no JavaScript) -->
+        <div class="lang-switch" role="group" aria-label="Language / اللغة">
+          <label class="lang-switch__label" for="lang-en" lang="en" dir="ltr">English</label>
+          <span class="lang-switch__sep" aria-hidden="true">|</span>
+          <label class="lang-switch__label" for="lang-ar" lang="ar" dir="rtl">العربية</label>
+        </div>
+
+        <a class="icon-btn icon-btn--ghost nav__github" href="https://github.com/abdulrhman-nassar"
+           target="_blank" rel="noopener noreferrer" aria-label="NASSAR DEV on GitHub (opens in a new tab)">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==========================================================
+         HERO
+         ========================================================== -->
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+
+        <div class="hero__content">
+          <p class="badge badge--status reveal">
+            <span class="badge__dot" aria-hidden="true"></span>
+            <span class="lang-en" lang="en" dir="ltr">Available for freelance projects</span>
+            <span class="lang-ar" lang="ar" dir="rtl">متاح لمشاريع العمل الحر</span>
+          </p>
+
+          <h1 class="hero__title reveal" id="hero-title">
+            <span class="lang-en" lang="en" dir="ltr">I Build Websites That Win Clients.</span><span class="lang-ar" lang="ar" dir="rtl">أبني لك موقعًا يجذب عملاءك.</span>
+          </h1>
+
+          <p class="hero__role reveal">
+            <span class="lang-en" lang="en" dir="ltr">Web Developer for Shops, Companies &amp; Online Stores</span><span class="lang-ar" lang="ar" dir="rtl">مطوّر مواقع ومتاجر إلكترونية لأصحاب المحلات والشركات</span>
+          </p>
+
+          <p class="hero__text reveal">
+            <span class="lang-en" lang="en" dir="ltr">Fast, mobile-friendly websites, online stores and landing pages for shop owners, companies and new businesses.</span><span class="lang-ar" lang="ar" dir="rtl">مواقع ومتاجر إلكترونية وصفحات هبوط سريعة وتعمل بشكل ممتاز على الموبايل، لأصحاب المحلات والشركات والمشاريع الجديدة.</span>
+          </p>
+
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" href="#projects">
+              <span class="lang-en" lang="en" dir="ltr">View My Projects</span>
+              <span class="lang-ar" lang="ar" dir="rtl">شاهد أعمالي</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">
+              <span class="lang-en" lang="en" dir="ltr">Let's Work Together</span>
+              <span class="lang-ar" lang="ar" dir="rtl">لنعمل معاً</span>
+            </a>
+            <a class="btn btn--quiet" href="https://github.com/abdulrhman-nassar" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg>
+              <span class="lang-en" lang="en" dir="ltr">View <bdi dir="ltr">GitHub</bdi></span>
+              <span class="lang-ar" lang="ar" dir="rtl">استعرض <bdi dir="ltr">GitHub</bdi></span>
+            </a>
+          </div>
+
+          <!-- Social links -->
+          <ul class="socials reveal" aria-label="Social links">
+            <li>
+              <a class="social" href="https://github.com/abdulrhman-nassar" target="_blank" rel="noopener noreferrer"
+                 aria-label="GitHub profile of NASSAR DEV (opens in a new tab)">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social" href="https://www.facebook.com/share/1EzJ3N5rJ2/" target="_blank" rel="noopener noreferrer"
+                 aria-label="Facebook page of NASSAR DEV (opens in a new tab)">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-facebook"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social" href="https://wa.me/201121067337" target="_blank" rel="noopener noreferrer"
+                 aria-label="WhatsApp chat with NASSAR DEV (opens in a new tab)">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a class="social" href="mailto:abonasarabdalrhmanalaa2010@gmail.com"
+                 aria-label="Send an email to NASSAR DEV">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Developer card / code visual — kept LTR in both languages
+             (code, terminal output and technology names) -->
+        <aside class="hero__visual reveal" dir="ltr" aria-label="Developer snapshot">
+          <div class="dev-card" role="img"
+               aria-label="Developer card: a code editor showing a small Python script, above a terminal window running a git push, with HTML5, CSS3, Git and GitHub badges.">
+            <div class="dev-card__bar" aria-hidden="true">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--amber"></span>
+              <span class="dot dot--green"></span>
+              <span class="dev-card__file">developer.py</span>
+            </div>
+
+            <div class="dev-card__body">
+              <pre class="code-block"><code><span class="c-var">skills</span> <span class="c-op">=</span> [<span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>, <span class="c-str">"JavaScript"</span>, <span class="c-str">"Python"</span>]
+
+<span class="c-key">def</span> <span class="c-fn">build</span>(idea):
+    <span class="c-key">return</span> <span class="c-str">"Build. Learn. Repeat."</span>
+
+<span class="c-key">for</span> skill <span class="c-key">in</span> skills:
+    <span class="c-fn">print</span>(skill, <span class="c-str">"-&gt;"</span>, <span class="c-fn">build</span>(skill))</code></pre>
+
+              <div class="terminal">
+                <p class="terminal__line"><span class="terminal__prompt">nassar@dev:~$</span> git push origin main</p>
+                <p class="terminal__line terminal__line--muted">Enumerating objects: 12, done.</p>
+                <p class="terminal__line terminal__line--muted">To https://github.com/abdulrhman-nassar</p>
+                <p class="terminal__line"><span class="terminal__prompt terminal__prompt--ok">nassar@dev:~$</span> <span class="terminal__cursor" aria-hidden="true"></span></p>
+              </div>
+            </div>
+
+            <div class="dev-card__footer">
+              <span class="chip chip--blue">HTML5</span>
+              <span class="chip chip--cyan">CSS3</span>
+              <span class="chip chip--green">Git</span>
+              <span class="chip chip--blue">GitHub</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         ABOUT
+         ========================================================== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="about-title"><span class="lang-en" lang="en" dir="ltr">Clean code. Thoughtful design.</span><span class="lang-ar" lang="ar" dir="rtl">كود نظيف. تصميم مدروس.</span></h2>
+          <p class="section__lead">
+            <span class="lang-en" lang="en" dir="ltr">
+              I'm <bdi>Abdulrhman Alaa Nassar</bdi> — a web developer focused on turning ideas into
+              fast, accessible and responsive websites that people can use on any screen.
+            </span>
+            <span class="lang-ar" lang="ar" dir="rtl">
+              أنا <bdi>عبدالرحمن علاء نصار</bdi> — مطوّر ويب أحوّل الأفكار إلى مواقع سريعة
+              وسهلة الوصول ومتجاوبة تعمل على أي شاشة.
+            </span>
+          </p>
+        </header>
+
+        <div class="about__grid">
+          <article class="about__intro reveal">
+            <p class="quote">
+              <span class="lang-en" lang="en" dir="ltr">
+                I believe a good website is not only visually appealing — it should load fast,
+                feel natural on every screen and be readable by everyone.
+              </span>
+              <span class="lang-ar" lang="ar" dir="rtl">
+                أعتقد أن الموقع الجيد ليس جميلاً فحسب — بل يجب أن يُحمَّل بسرعة،
+                وأن يكون طبيعياً على كل الشاشات، وأن يكون مقروءاً من الجميع.
+              </span>
+            </p>
+            <p>
+              <span class="lang-en" lang="en" dir="ltr">
+                My work combines semantic HTML5, modern CSS3 and JavaScript on the front end with
+                Python for scripts and automation, versioned with Git and hosted through GitHub.
+                Every project is built to be easy to maintain and simple to extend.
+              </span>
+              <span class="lang-ar" lang="ar" dir="rtl">
+                يجمع عملي بين <bdi dir="ltr">HTML5</bdi> الدلالي و<bdi dir="ltr">CSS3</bdi> الحديث
+                و<bdi dir="ltr">JavaScript</bdi> في الواجهة الأمامية، مع <bdi dir="ltr">Python</bdi>
+                للسكربتات والأتمتة، وإدارة الإصدارات عبر <bdi dir="ltr">Git</bdi>
+                والاستضافة على <bdi dir="ltr">GitHub</bdi>. كل مشروع مبني ليكون سهل الصيانة والتوسعة.
+              </span>
+            </p>
+            <p>
+              <span class="lang-en" lang="en" dir="ltr">
+                I care about clean, maintainable code and smooth details, and I am always open to
+                new freelance projects.
+              </span>
+              <span class="lang-ar" lang="ar" dir="rtl">
+                أهتم بالكود النظيف القابل للصيانة وبالتفاصيل السلسة، وأنا منفتح دائماً على
+                مشاريع العمل الحر الجديدة.
+              </span>
+            </p>
+
+            <ul class="about__facts" aria-label="Quick facts">
+              <li><span class="about__fact-key"><span class="lang-en" lang="en" dir="ltr">Focus</span><span class="lang-ar" lang="ar" dir="rtl">التخصص</span></span><span class="about__fact-val"><span class="lang-en" lang="en" dir="ltr">Web Development</span><span class="lang-ar" lang="ar" dir="rtl">تطوير الويب</span></span></li>
+              <li><span class="about__fact-key"><span class="lang-en" lang="en" dir="ltr">Work style</span><span class="lang-ar" lang="ar" dir="rtl">أسلوب العمل</span></span><span class="fact-dot" aria-hidden="true"></span><span class="about__fact-val"><span class="lang-en" lang="en" dir="ltr">Freelance &amp; Remote-friendly</span><span class="lang-ar" lang="ar" dir="rtl">عمل حر &amp; عن بُعد</span></span></li>
+            </ul>
+          </article>
+
+          <div class="about__panel reveal">
+            <figure class="about__media">
+              <img src="profile-portrait2.jpeg" width="900" height="1100" loading="lazy" decoding="async"
+                   alt="Portrait of NASSAR DEV">
+            </figure>
+
+            <dl class="info-cards">
+              <div class="info-card">
+                <dt class="info-card__key">
+                  <span class="info-card__icon" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-user"></use></svg>
+                  </span>
+                  <span class="lang-en" lang="en" dir="ltr">Role</span>
+                  <span class="lang-ar" lang="ar" dir="rtl">الدور</span>
+                </dt>
+                <dd class="info-card__val">
+                  <span class="lang-en" lang="en" dir="ltr">Web Developer for Shops, Companies &amp; Online Stores</span><span class="lang-ar" lang="ar" dir="rtl">مطوّر مواقع ومتاجر إلكترونية لأصحاب المحلات والشركات</span>
+                </dd>
+              </div>
+
+              <div class="info-card">
+                <dt class="info-card__key">
+                  <span class="info-card__icon" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-layers"></use></svg>
+                  </span>
+                  <span class="lang-en" lang="en" dir="ltr">Focus</span>
+                  <span class="lang-ar" lang="ar" dir="rtl">التخصص</span>
+                </dt>
+                <dd class="info-card__val">
+                  <span class="lang-en" lang="en" dir="ltr">Web Development</span>
+                  <span class="lang-ar" lang="ar" dir="rtl">تطوير الويب</span>
+                </dd>
+              </div>
+
+              <!-- Technology names stay LTR in both languages -->
+              <div class="info-card">
+                <dt class="info-card__key">
+                  <span class="info-card__icon" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-code"></use></svg>
+                  </span>
+                  <span class="lang-en" lang="en" dir="ltr">Technologies</span>
+                  <span class="lang-ar" lang="ar" dir="rtl">التقنيات</span>
+                </dt>
+                <dd class="info-card__val" dir="ltr">HTML, CSS, JavaScript, Python</dd>
+              </div>
+
+              <div class="info-card">
+                <dt class="info-card__key">
+                  <span class="info-card__icon" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-terminal"></use></svg>
+                  </span>
+                  <span class="lang-en" lang="en" dir="ltr">Tools</span>
+                  <span class="lang-ar" lang="ar" dir="rtl">الأدوات</span>
+                </dt>
+                <dd class="info-card__val" dir="ltr">Git &amp; GitHub</dd>
+              </div>
+
+              <div class="info-card">
+                <dt class="info-card__key">
+                  <span class="info-card__icon" aria-hidden="true">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                  </span>
+                  <span class="lang-en" lang="en" dir="ltr">Availability</span>
+                  <span class="lang-ar" lang="ar" dir="rtl">التوفر</span>
+                </dt>
+                <dd class="info-card__val">
+                  <span class="lang-en" lang="en" dir="ltr">Freelance Projects</span>
+                  <span class="lang-ar" lang="ar" dir="rtl">مشاريع العمل الحر</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Statistics (labels only — no invented numbers) -->
+        <ul class="stats reveal" aria-label="Why work with me">
+          <li class="stat">
+            <span class="stat__value stat__value--text"><span class="lang-en" lang="en" dir="ltr">Mobile-first</span><span class="lang-ar" lang="ar" dir="rtl">للموبايل أولًا</span></span>
+            <span class="stat__label"><span class="lang-en" lang="en" dir="ltr">Responsive design</span><span class="lang-ar" lang="ar" dir="rtl">تصميم متجاوب</span></span>
+            <span class="stat__note"><span class="lang-en" lang="en" dir="ltr">Looks great on any phone, tablet or desktop</span><span class="lang-ar" lang="ar" dir="rtl">شكل ممتاز على أي موبايل أو تابلت أو كمبيوتر</span></span>
+          </li>
+          <li class="stat">
+            <span class="stat__value stat__value--text"><span class="lang-en" lang="en" dir="ltr">WhatsApp</span><span class="lang-ar" lang="ar" dir="rtl">واتساب</span></span>
+            <span class="stat__label"><span class="lang-en" lang="en" dir="ltr">Quick replies</span><span class="lang-ar" lang="ar" dir="rtl">رد سريع</span></span>
+            <span class="stat__note"><span class="lang-en" lang="en" dir="ltr">Talk to me directly, no middlemen</span><span class="lang-ar" lang="ar" dir="rtl">كلّمني مباشرة من غير وسيط</span></span>
+          </li>
+          <li class="stat">
+            <span class="stat__value stat__value--text"><span class="lang-en" lang="en" dir="ltr">On time</span><span class="lang-ar" lang="ar" dir="rtl">في الميعاد</span></span>
+            <span class="stat__label"><span class="lang-en" lang="en" dir="ltr">Clear timeline</span><span class="lang-ar" lang="ar" dir="rtl">تسليم واضح</span></span>
+            <span class="stat__note"><span class="lang-en" lang="en" dir="ltr">Scope and delivery date agreed before we start</span><span class="lang-ar" lang="ar" dir="rtl">نتفق على المطلوب وموعد التسليم قبل ما نبدأ</span></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SKILLS
+         ========================================================== -->
+    <section class="section skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="skills-title"><span class="lang-en" lang="en" dir="ltr">Skills &amp; Technologies</span><span class="lang-ar" lang="ar" dir="rtl">المهارات والتقنيات</span></h2>
+          <p class="section__lead">
+            <span class="lang-en" lang="en" dir="ltr">
+              The tools I use to design, build and ship modern web experiences — from semantic
+              markup to Python scripts.
+            </span>
+            <span class="lang-ar" lang="ar" dir="rtl">
+              الأدوات التي أستخدمها في تصميم وبناء ونشر تجارب ويب حديثة — من الترميز الدلالي
+              إلى سكربتات <bdi dir="ltr">Python</bdi>.
+            </span>
+          </p>
+        </header>
+
+        <ul class="skills__grid">
+          <li class="skill-card reveal">
+            <span class="skill-card__icon skill-card__icon--html" aria-hidden="true">&lt;/&gt;</span>
+            <h3 class="skill-card__title" dir="ltr">HTML5</h3>
+            <p class="skill-card__text"><span class="lang-en" lang="en" dir="ltr">Semantic, accessible page structure with clean, meaningful markup.</span><span class="lang-ar" lang="ar" dir="rtl">هيكل صفحات دلالي وسهل الوصول، ببناء نظيف وواضح المعنى.</span></p>
+            <span class="skill-card__meta"><span class="lang-en" lang="en" dir="ltr">Structure &amp; SEO</span><span class="lang-ar" lang="ar" dir="rtl">البنية وتحسين محركات البحث</span></span>
+          </li>
+
+          <li class="skill-card reveal">
+            <span class="skill-card__icon skill-card__icon--css" aria-hidden="true">#</span>
+            <h3 class="skill-card__title" dir="ltr">CSS3</h3>
+            <p class="skill-card__text"><span class="lang-en" lang="en" dir="ltr">Modern layouts with Grid, Flexbox, custom properties and fluid type.</span><span class="lang-ar" lang="ar" dir="rtl">تخطيطات عصرية باستخدام Grid وFlexbox والمتغيّرات المخصّصة والخطوط المتجاوبة.</span></p>
+            <span class="skill-card__meta"><span class="lang-en" lang="en" dir="ltr">Layout &amp; Styling</span><span class="lang-ar" lang="ar" dir="rtl">التخطيط والتنسيق</span></span>
+          </li>
+
+          <li class="skill-card reveal">
+            <span class="skill-card__icon skill-card__icon--js" aria-hidden="true">JS</span>
+            <h3 class="skill-card__title" dir="ltr">JavaScript</h3>
+            <p class="skill-card__text"><span class="lang-en" lang="en" dir="ltr">Interactive behaviour, DOM manipulation and small, reusable logic.</span><span class="lang-ar" lang="ar" dir="rtl">تفاعلات ديناميكية، والتعامل مع DOM، ومنطق بسيط قابل لإعادة الاستخدام.</span></p>
+            <span class="skill-card__meta"><span class="lang-en" lang="en" dir="ltr">Interactivity</span><span class="lang-ar" lang="ar" dir="rtl">التفاعلية</span></span>
+          </li>
+
+          <li class="skill-card reveal">
+            <span class="skill-card__icon skill-card__icon--py" aria-hidden="true">Py</span>
+            <h3 class="skill-card__title" dir="ltr">Python</h3>
+            <p class="skill-card__text"><span class="lang-en" lang="en" dir="ltr">Readable scripts and automation written for clarity and reliability.</span><span class="lang-ar" lang="ar" dir="rtl">سكربتات وأتمتة مكتوبة بوضوح وموثوقية.</span></p>
+            <span class="skill-card__meta"><span class="lang-en" lang="en" dir="ltr">Scripting &amp; automation</span><span class="lang-ar" lang="ar" dir="rtl">السكربتات والأتمتة</span></span>
+          </li>
+
+          <li class="skill-card reveal">
+            <span class="skill-card__icon skill-card__icon--git" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-terminal"></use></svg>
+            </span>
+            <h3 class="skill-card__title" dir="ltr">Git</h3>
+            <p class="skill-card__text"><span class="lang-en" lang="en" dir="ltr">Version control with clear commits, branches and reliable history.</span><span class="lang-ar" lang="ar" dir="rtl">تحكّم بالإصدارات عبر إيداعات واضحة وفروع وتاريخ موثوق.</span></p>
+            <span class="skill-card__meta"><span class="lang-en" lang="en" dir="ltr">Version control</span><span class="lang-ar" lang="ar" dir="rtl">التحكّم بالإصدارات</span></span>
+          </li>
+
+          <li class="skill-card reveal">
+            <span class="skill-card__icon skill-card__icon--gh" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-github"></use></svg>
+            </span>
+            <h3 class="skill-card__title" dir="ltr">GitHub</h3>
+            <p class="skill-card__text"><span class="lang-en" lang="en" dir="ltr">Repositories, issues and pull requests that keep projects organised.</span><span class="lang-ar" lang="ar" dir="rtl">مستودعات ومشكلات وطلبات دمج تُبقي المشاريع منظّمة.</span></p>
+            <span class="skill-card__meta"><span class="lang-en" lang="en" dir="ltr">Collaboration</span><span class="lang-ar" lang="ar" dir="rtl">التعاون</span></span>
+          </li>
+
+          <li class="skill-card reveal">
+            <span class="skill-card__icon skill-card__icon--rwd" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-layers"></use></svg>
+            </span>
+            <h3 class="skill-card__title"><span class="lang-en" lang="en" dir="ltr">Responsive Design</span><span class="lang-ar" lang="ar" dir="rtl">التصميم المتجاوب</span></h3>
+            <p class="skill-card__text"><span class="lang-en" lang="en" dir="ltr">Mobile-first layouts that stay readable from 320px up to 1920px.</span><span class="lang-ar" lang="ar" dir="rtl">تصاميم تبدأ من الجوال أولاً، وتبقى واضحة من عرض <bdi dir="ltr">320px</bdi> حتى <bdi dir="ltr">1920px</bdi>.</span></p>
+            <span class="skill-card__meta"><span class="lang-en" lang="en" dir="ltr">Every screen size</span><span class="lang-ar" lang="ar" dir="rtl">كل مقاسات الشاشات</span></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SERVICES
+         ========================================================== -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="services-title"><span class="lang-en" lang="en" dir="ltr">What I Can Build</span><span class="lang-ar" lang="ar" dir="rtl">ما يمكنني بِناؤه</span></h2>
+          <p class="section__lead">
+            <span class="lang-en" lang="en" dir="ltr">
+              Four focused services — each one delivered as a clean, responsive and easy-to-maintain
+              front-end website.
+            </span>
+            <span class="lang-ar" lang="ar" dir="rtl">
+              أربع خدمات متخصّصة — كل منها تُسلَّم كموقع واجهة أمامية نظيف وسريع الاستجابة
+              وسهل الصيانة.
+            </span>
+          </p>
+        </header>
+
+        <ul class="services__grid">
+          <li class="service-card reveal">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-layers"></use></svg>
+            </span>
+            <h3 class="service-card__title"><span class="lang-en" lang="en" dir="ltr">Business Websites</span><span class="lang-ar" lang="ar" dir="rtl">مواقع الشركات</span></h3>
+            <p class="service-card__text"><span class="lang-en" lang="en" dir="ltr">Modern websites for companies and businesses.</span><span class="lang-ar" lang="ar" dir="rtl">مواقع حديثة للشركات والمشاريع التجارية.</span></p>
+            <span class="service-card__more"><span class="lang-en" lang="en" dir="ltr">Company profile, services, contact</span><span class="lang-ar" lang="ar" dir="rtl">نبذة عن الشركة، الخدمات، التواصل</span></span>
+          </li>
+
+          <li class="service-card reveal">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-spark"></use></svg>
+            </span>
+            <h3 class="service-card__title"><span class="lang-en" lang="en" dir="ltr">Landing Pages</span><span class="lang-ar" lang="ar" dir="rtl">صفحات الهبوط</span></h3>
+            <p class="service-card__text"><span class="lang-en" lang="en" dir="ltr">High-converting landing pages for products and services.</span><span class="lang-ar" lang="ar" dir="rtl">صفحات هبوط مُحسّنة لزيادة التحويلات في العروض والخدمات.</span></p>
+            <span class="service-card__more"><span class="lang-en" lang="en" dir="ltr">Hero, benefits, call to action</span><span class="lang-ar" lang="ar" dir="rtl">الواجهة الرئيسية، المزايا، دعوة لاتخاذ إجراء</span></span>
+          </li>
+
+          <li class="service-card reveal">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-user"></use></svg>
+            </span>
+            <h3 class="service-card__title"><span class="lang-en" lang="en" dir="ltr">Portfolio Websites</span><span class="lang-ar" lang="ar" dir="rtl">مواقع الملف الشخصي</span></h3>
+            <p class="service-card__text"><span class="lang-en" lang="en" dir="ltr">Professional personal portfolios for developers and creators.</span><span class="lang-ar" lang="ar" dir="rtl">ملفات أعمال احترافية للمطوّرين وصنّاع المحتوى.</span></p>
+            <span class="service-card__more"><span class="lang-en" lang="en" dir="ltr">Projects, skills, contact</span><span class="lang-ar" lang="ar" dir="rtl">المشاريع، المهارات، التواصل</span></span>
+          </li>
+
+          <li class="service-card reveal">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-cart"></use></svg>
+            </span>
+            <h3 class="service-card__title"><span class="lang-en" lang="en" dir="ltr">E-commerce Interfaces</span><span class="lang-ar" lang="ar" dir="rtl">واجهات المتاجر الإلكترونية</span></h3>
+            <p class="service-card__text"><span class="lang-en" lang="en" dir="ltr">Modern storefront interfaces for online businesses.</span><span class="lang-ar" lang="ar" dir="rtl">واجهات متاجر عصرية للمتاجر الإلكترونية.</span></p>
+            <span class="service-card__more"><span class="lang-en" lang="en" dir="ltr">Catalog, product pages, cart UI</span><span class="lang-ar" lang="ar" dir="rtl">الكتالوج، صفحات المنتجات، واجهة السلة</span></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         PROJECTS
+         ========================================================== -->
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="projects-title"><span class="lang-en" lang="en" dir="ltr">Featured Projects</span><span class="lang-ar" lang="ar" dir="rtl">مشاريع مختارة</span></h2>
+        </header>
+
+        <div class="projects__grid">
+          <article class="project-card reveal">
+            <figure class="project-card__media">
+              <img src="project-shot-5.webp" alt="METQAN clothing store website preview" loading="lazy" decoding="async" width="1280" height="720">
+            </figure>
+            <div class="project-card__body">
+              <h3 class="project-card__title">
+                <span class="lang-en" lang="en" dir="ltr">METQAN Store</span>
+                <span class="lang-ar" lang="ar" dir="rtl">متجر متقن</span>
+              </h3>
+              <p class="project-card__text">
+                <span class="lang-en" lang="en" dir="ltr">A modern e-commerce interface for a youth clothing brand.</span>
+                <span class="lang-ar" lang="ar" dir="rtl">واجهة متجر إلكتروني حديثة لعلامة ملابس شبابية.</span>
+              </p>
+              <div class="project-card__actions">
+                <a href="https://abdulrhman-nassar.github.io/metqan-shop/" target="_blank" rel="noopener noreferrer" class="btn btn--sm">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-external"></use></svg>
+                  <span class="lang-en" lang="en" dir="ltr">Live Demo</span>
+                  <span class="lang-ar" lang="ar" dir="rtl">معاينة الموقع</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="project-card__media">
+              <img src="project-shot-2.webp" alt="PhoneZone online store website preview" loading="lazy" decoding="async" width="1280" height="720">
+            </figure>
+            <div class="project-card__body">
+              <h3 class="project-card__title">
+                <span class="lang-en" lang="en" dir="ltr">PhoneZone</span>
+                <span class="lang-ar" lang="ar" dir="rtl">فون زون</span>
+              </h3>
+              <p class="project-card__text">
+                <span class="lang-en" lang="en" dir="ltr">An e-commerce website concept for smartphones and accessories.</span>
+                <span class="lang-ar" lang="ar" dir="rtl">تصميم متجر إلكتروني للهواتف الذكية والإكسسوارات.</span>
+              </p>
+              <div class="project-card__actions">
+                <a href="https://abdulrhman-nassar.github.io/phonezone/" target="_blank" rel="noopener noreferrer" class="btn btn--sm">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-external"></use></svg>
+                  <span class="lang-en" lang="en" dir="ltr">Live Demo</span>
+                  <span class="lang-ar" lang="ar" dir="rtl">معاينة الموقع</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="project-card__media">
+              <img src="project-luna-bags.webp" alt="Luna Bags online store website preview" loading="lazy" decoding="async" width="1280" height="720">
+            </figure>
+            <div class="project-card__body">
+              <h3 class="project-card__title">
+                <span class="lang-en" lang="en" dir="ltr">Luna Bags</span>
+                <span class="lang-ar" lang="ar" dir="rtl">لونا باجز</span>
+              </h3>
+              <p class="project-card__text">
+                <span class="lang-en" lang="en" dir="ltr">A modern e-commerce website for bags with an elegant and responsive design.</span>
+                <span class="lang-ar" lang="ar" dir="rtl">متجر إلكتروني عصري للشنط بتصميم أنيق ومتجاوب مع جميع الأجهزة.</span>
+              </p>
+              <div class="project-card__actions">
+                <a href="https://abdulrhman-nassar.github.io/Luna-Bags/#gallery" target="_blank" rel="noopener noreferrer" class="btn btn--sm">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-external"></use></svg>
+                  <span class="lang-en" lang="en" dir="ltr">Live Demo</span>
+                <span class="lang-ar" lang="ar" dir="rtl">معاينة الموقع</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         GITHUB
+         ========================================================== -->
+    <section class="section github" id="github" aria-labelledby="github-title">
+      <div class="container">
+        <div class="github__panel reveal">
+
+          <div class="github__content">
+            <span class="github__mark" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-github"></use></svg>
+            </span>
+<h2 class="github__title" id="github-title"><span class="lang-en" lang="en" dir="ltr">Code. Build. Share.</span><span class="lang-ar" lang="ar" dir="rtl">اكتب. ابنِ. شارك.</span></h2>
+            <p class="github__text">
+              <span class="lang-en" lang="en" dir="ltr">Explore my projects and development work on GitHub.</span>
+              <span class="lang-ar" lang="ar" dir="rtl">استكشف مشاريعي وأعمالي البرمجية على <bdi dir="ltr">GitHub</bdi>.</span>
+            </p>
+
+            <div class="github__stack" aria-label="Version control and hosting">
+              <span class="chip chip--ghost">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-terminal"></use></svg>
+                <span class="lang-en" lang="en" dir="ltr">Git — version control</span>
+                <span class="lang-ar" lang="ar" dir="rtl"><bdi dir="ltr">Git</bdi> — التحكّم بالإصدارات</span>
+              </span>
+              <span class="chip chip--ghost">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-code"></use></svg>
+                <span class="lang-en" lang="en" dir="ltr">Commits &amp; branches</span>
+                <span class="lang-ar" lang="ar" dir="rtl">الإيداعات والفروع</span>
+              </span>
+              <span class="chip chip--ghost">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-layers"></use></svg>
+                <span class="lang-en" lang="en" dir="ltr">Repositories</span>
+                <span class="lang-ar" lang="ar" dir="rtl">المستودعات</span>
+              </span>
+            </div>
+
+            <a class="btn btn--primary github__btn" href="https://github.com/abdulrhman-nassar" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg>
+              <span class="lang-en" lang="en" dir="ltr">View GitHub Profile</span>
+              <span class="lang-ar" lang="ar" dir="rtl">مشاهدة حساب <bdi dir="ltr">GitHub</bdi></span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-external"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         PROCESS
+         ========================================================== -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="process-title"><span class="lang-en" lang="en" dir="ltr">How I Work</span><span class="lang-ar" lang="ar" dir="rtl">إزاي أشتغل</span></h2>
+          <p class="section__lead"><span class="lang-en" lang="en" dir="ltr">A simple, repeatable process — so every project stays clear, predictable and easy to review.</span><span class="lang-ar" lang="ar" dir="rtl">خطوات بسيطة وواضحة — عشان كل مشروع يمشي بشكل مفهوم ومتوقع وسهل المراجعة.</span></p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__step reveal">
+            <span class="timeline__num">01</span>
+            <h3 class="timeline__title"><span class="lang-en" lang="en" dir="ltr">Discover</span><span class="lang-ar" lang="ar" dir="rtl">نفهم المشروع</span></h3>
+            <p class="timeline__text"><span class="lang-en" lang="en" dir="ltr">Understand the project and requirements.</span><span class="lang-ar" lang="ar" dir="rtl">أفهم مشروعك وهدفك ومتطلباتك.</span></p>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">02</span>
+            <h3 class="timeline__title"><span class="lang-en" lang="en" dir="ltr">Design</span><span class="lang-ar" lang="ar" dir="rtl">التصميم</span></h3>
+            <p class="timeline__text"><span class="lang-en" lang="en" dir="ltr">Create a clean visual structure.</span><span class="lang-ar" lang="ar" dir="rtl">أصمم شكلًا نظيفًا ومرتبًا.</span></p>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">03</span>
+            <h3 class="timeline__title"><span class="lang-en" lang="en" dir="ltr">Build</span><span class="lang-ar" lang="ar" dir="rtl">التنفيذ</span></h3>
+            <p class="timeline__text"><span class="lang-en" lang="en" dir="ltr">Develop the responsive website.</span><span class="lang-ar" lang="ar" dir="rtl">أبني الموقع متجاوبًا مع كل الشاشات.</span></p>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num">04</span>
+            <h3 class="timeline__title"><span class="lang-en" lang="en" dir="ltr">Refine</span><span class="lang-ar" lang="ar" dir="rtl">التسليم والتحسين</span></h3>
+            <p class="timeline__text"><span class="lang-en" lang="en" dir="ltr">Test, optimize and improve the final result.</span><span class="lang-ar" lang="ar" dir="rtl">أختبر وأحسّن النتيجة النهائية وأسلّمها لك.</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CONTACT
+         ========================================================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__grid">
+
+          <div class="contact__intro reveal">
+            <h2 class="section__title" id="contact-title"><span class="lang-en" lang="en" dir="ltr">Have a project in mind?</span><span class="lang-ar" lang="ar" dir="rtl">عندك مشروع في بالك؟</span></h2>
+            <p class="contact__lead"><span class="lang-en" lang="en" dir="ltr">Tell me what you need and I will reply with a clear offer.</span><span class="lang-ar" lang="ar" dir="rtl">قولّي محتاج إيه وهرد عليك بعرض واضح.</span></p>
+
+            <ul class="contact__links">
+              <li>
+                <a class="contact__link" href="https://wa.me/201121067337" target="_blank" rel="noopener noreferrer">
+                  <span class="contact__link-icon" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-whatsapp"></use></svg>
+                  </span>
+                  <span class="contact__link-body">
+                    <span class="contact__link-label"><span class="lang-en" lang="en" dir="ltr">WhatsApp</span><span class="lang-ar" lang="ar" dir="rtl">واتساب</span></span>
+                    <span class="contact__link-value"><span class="lang-en" lang="en" dir="ltr">Chat with me directly</span><span class="lang-ar" lang="ar" dir="rtl">كلّمني مباشرة</span></span>
+                  </span>
+                  <svg class="icon contact__link-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+                </a>
+              </li>
+              <li>
+                <a class="contact__link" href="mailto:abonasarabdalrhmanalaa2010@gmail.com">
+                  <span class="contact__link-icon" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-mail"></use></svg>
+                  </span>
+                  <span class="contact__link-body">
+                    <span class="contact__link-label"><span class="lang-en" lang="en" dir="ltr">Email</span><span class="lang-ar" lang="ar" dir="rtl">البريد الإلكتروني</span></span>
+                    <span class="contact__link-value">abonasarabdalrhmanalaa2010@gmail.com</span>
+                  </span>
+                  <svg class="icon contact__link-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+                </a>
+              </li>
+              <li>
+                <a class="contact__link" href="https://www.facebook.com/share/1EzJ3N5rJ2/" target="_blank" rel="noopener noreferrer">
+                  <span class="contact__link-icon" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" focusable="false"><use href="#i-facebook"></use></svg>
+                  </span>
+                  <span class="contact__link-body">
+                    <span class="contact__link-label"><span class="lang-en" lang="en" dir="ltr">Facebook</span><span class="lang-ar" lang="ar" dir="rtl">فيسبوك</span></span>
+                    <span class="contact__link-value"><span class="lang-en" lang="en" dir="ltr">Send a message</span><span class="lang-ar" lang="ar" dir="rtl">ابعتلي رسالة</span></span>
+                  </span>
+                  <svg class="icon contact__link-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- The form opens WhatsApp with the message ready to send.
+               Works without JavaScript too (plain GET to wa.me); js/main.js builds a nicer message. -->
+          <form class="contact-form reveal" id="contact-form" action="https://wa.me/201121067337" method="get" target="_blank">
+            <h3 class="contact-form__title"><span class="lang-en" lang="en" dir="ltr">Send a message</span><span class="lang-ar" lang="ar" dir="rtl">ابعت رسالة</span></h3>
+            <p class="contact-form__hint"><span class="lang-en" lang="en" dir="ltr">Tell me about your project and I will get back to you.</span><span class="lang-ar" lang="ar" dir="rtl">احكيلي عن مشروعك وهرد عليك.</span></p>
+
+            <div class="field">
+              <label class="field__label" for="name"><span class="lang-en" lang="en" dir="ltr">Name</span><span class="lang-ar" lang="ar" dir="rtl">الاسم</span></label>
+              <input class="field__input" type="text" id="name" name="name" placeholder="الاسم"
+                     data-ph-ar="الاسم" data-ph-en="Your name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="phone"><span class="lang-en" lang="en" dir="ltr">Phone / WhatsApp (optional)</span><span class="lang-ar" lang="ar" dir="rtl">رقم الموبايل / واتساب (اختياري)</span></label>
+              <input class="field__input" type="tel" id="phone" name="phone" placeholder="01xxxxxxxxx"
+                     dir="ltr" autocomplete="tel">
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="message"><span class="lang-en" lang="en" dir="ltr">Message</span><span class="lang-ar" lang="ar" dir="rtl">الرسالة</span></label>
+              <textarea class="field__input field__input--area" id="message" name="text" rows="5"
+                        placeholder="احكيلي عن مشروعك: النشاط، المطلوب، والموعد"
+                        data-ph-ar="احكيلي عن مشروعك: النشاط، المطلوب، والموعد"
+                        data-ph-en="Describe your project, timeline and budget" required></textarea>
+            </div>
+
+            <button class="btn btn--primary btn--block" type="submit">
+              <span class="lang-en" lang="en" dir="ltr">Send via WhatsApp</span><span class="lang-ar" lang="ar" dir="rtl">ابعت عبر واتساب</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </button>
+
+            <p class="contact-form__note">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>
+              <span class="lang-en" lang="en" dir="ltr">WhatsApp will open with your message ready to send.</span><span class="lang-ar" lang="ar" dir="rtl">هيتفتح عندك واتساب ورسالتك جاهزة للإرسال.</span>
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+
+      <div class="footer__brand">
+        <a class="brand" href="#home" aria-label="NASSAR DEV — back to top">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false"><path d="M18 46V18h6l16 19V18h6v28h-6L24 27v19z" fill="currentColor"/></svg>
+          </span>
+          <span class="brand__text" translate="no">NASSAR<span class="brand__accent"> DEV</span></span>
+        </a>
+        <p class="footer__tagline"><span class="lang-en" lang="en" dir="ltr">Websites that bring you customers.</span><span class="lang-ar" lang="ar" dir="rtl">مواقع تجذب لك العملاء.</span></p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer">
+        <h2 class="footer__heading"><span class="lang-en" lang="en" dir="ltr">Links</span><span class="lang-ar" lang="ar" dir="rtl">روابط</span></h2>
+        <ul class="footer__list">
+          <li><a href="#home"><span class="lang-en" lang="en" dir="ltr">Home</span><span class="lang-ar" lang="ar" dir="rtl">الرئيسية</span></a></li>
+          <li><a href="#about"><span class="lang-en" lang="en" dir="ltr">About</span><span class="lang-ar" lang="ar" dir="rtl">نبذة</span></a></li>
+          <li><a href="#skills"><span class="lang-en" lang="en" dir="ltr">Skills</span><span class="lang-ar" lang="ar" dir="rtl">المهارات</span></a></li>
+          <li><a href="#projects"><span class="lang-en" lang="en" dir="ltr">Projects</span><span class="lang-ar" lang="ar" dir="rtl">المشاريع</span></a></li>
+          <li><a href="#contact"><span class="lang-en" lang="en" dir="ltr">Contact</span><span class="lang-ar" lang="ar" dir="rtl">تواصل</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <h2 class="footer__heading"><span class="lang-en" lang="en" dir="ltr">Connect</span><span class="lang-ar" lang="ar" dir="rtl">تواصل معي</span></h2>
+        <ul class="socials socials--footer" aria-label="Social links">
+          <li>
+            <a class="social" href="https://github.com/abdulrhman-nassar" target="_blank" rel="noopener noreferrer"
+               aria-label="GitHub (opens in a new tab)">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="social" href="https://www.facebook.com/share/1EzJ3N5rJ2/" target="_blank" rel="noopener noreferrer"
+               aria-label="Facebook (opens in a new tab)">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-facebook"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="social" href="https://wa.me/201121067337" target="_blank" rel="noopener noreferrer"
+               aria-label="WhatsApp (opens in a new tab)">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="social" href="mailto:abonasarabdalrhmanalaa2010@gmail.com" aria-label="Email NASSAR DEV">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer__bottom">
+      <p class="footer__copy"><span class="lang-en" lang="en" dir="ltr">&copy; 2026 Abdulrhman Alaa Nassar. All rights reserved.</span><span class="lang-ar" lang="ar" dir="rtl">&copy; 2026 عبدالرحمن علاء نصار. جميع الحقوق محفوظة.</span></p>
+      <a class="footer__top" href="#top">
+        <span class="lang-en" lang="en" dir="ltr">Back to top</span><span class="lang-ar" lang="ar" dir="rtl">للأعلى</span>
+        <svg class="icon footer__top-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <use href="#i-arrow-up"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class="wa-float" href="https://wa.me/201121067337?text=%D8%A3%D9%87%D9%84%D9%8B%D8%A7%D8%8C%20%D8%B4%D9%81%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%D9%83%20%D9%88%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
+    <span class="wa-float__text"><span class="lang-en" lang="en" dir="ltr">WhatsApp</span><span class="lang-ar" lang="ar" dir="rtl">كلّمني واتساب</span></span>
+  </a>
+
+</body>
+</html>
